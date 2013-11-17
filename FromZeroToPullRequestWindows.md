@@ -89,22 +89,22 @@ https://github.com/YourUserName/TheRepoName .
 >   If you're worried that this seems weird or presumptuous - don't be; forking
 >   is a very normal thing on GitHub and it doesn't functionally affect the
 >   original project in any way or obligate you to contribute.  You don't need
->   any special permissions to fork a public repo, either - it's totally open!
+>   any special permissions to fork a public repo either - it's totally open!
 
 Open the GitHub for Windows app and click on your profile on the left under the
 "GitHub" category.  The list of repositories in your account should show,
-including the repo that you just forked.  (If the forked repo isn't there, click
-refresh and it should appear.)  Hover the mouse pointer over the forked repo and
-click "Clone".  After a few minutes, all of the source code from the repository
-will be copied to your computer.  By default, GitHub for Windows clones
-repositories as folders under "*MyDocuments*\\GitHub".  Double-click on the
-repository in GitHub for Windows and you will be brought to the main repo screen
-which shows the commit history on the left, and commit details on the right.
+including the repo that you just forked (if not, try refreshing).  Hover the
+mouse pointer over the forked repo and click "Clone".  All of the source code
+from the repository will be copied to your computer.  By default, GitHub for
+Windows clones repositories as folders under "*MyDocuments*\\GitHub".
+Double-click on the repository in GitHub for Windows and you will be brought to
+the main repo screen which shows the commit history on the left, and commit
+details on the right.
 
 
 
-Creating a Branch and Committing Code
--------------------------------------
+Creating a Branch
+-----------------
 
 *A branch in Git is the way that independent development efforts are kept
 separate from each other within a repo.  A commit is a unit of work that is
@@ -130,6 +130,11 @@ didn't even have to talk to GitHub to do this; Git is a decentralized source
 control system and operations mostly take place locally until they are
 synchronized with the server.
 
+
+
+Committing Code
+---------------
+
 Click the "gear" icon in the top-right and select "Open in Explorer".  Create a
 new text file in that folder called "ThisIsMyNewFeature.txt".  Put **at least
 three lines** of random text in the file, and save it.  Switch back to GitHub
@@ -137,18 +142,18 @@ for Windows.  You should see in the upper-left that there are "uncommitted
 changes".  Click the button labeled "show".
 
 Listed on the right-hand panel, you should see the name of the text file that
-you created.  You should be able to see its content by clicking the "twisty"
-adjacent to the file name.  (If you don't see the file, the TXT extension might
-be ignored by the project - try renaming to .js or .md.)  Since it's a new file,
-each line in the text file will be highlighted in green to indicate addition.
-Ensure that the checkbox next to the file name is checked, type a commit message
-such as "Added new feature text file" in the field on the upper-left, and then
-click the "commit to MyNewFeature" button.
+you created.  The content is displayed by clicking the "twisty" adjacent to the
+file name.  (If you don't see the file, the .txt extension might be ignored by
+the project - try renaming to .js or .md.)  Since it's a new file, each line
+will be highlighted in green to indicate addition.  Ensure that the box next to
+the file name is checked and type a commit message such as "Added new feature
+text file" in the field on the upper-left.  Finally, click the "commit to
+MyNewFeature" button.
 
-You've now successfully committed code to your branch!  The commit should now
-appear in the history list on the left above the historical commits made by
-other users.  Now, switch back to the same text file using your text editor and
-modify **one** of the lines (in whatever way, as long as it's different) and add
+You've now successfully committed code to your branch!  The commit should appear
+in the history list on the left above the historical commits made by other
+users.  Now, switch back to the same text file using your text editor and modify
+**one** of the lines (in whatever way, as long as it's different) and add
 **one** new line with new random text.  Switch back to GitHub for Windows, and
 you should now see that the removed lines are highlighted in a salmon color and
 the added lines are again highlighted in green (Git considers a modified line to
