@@ -276,18 +276,74 @@ see a PowerShell instance (GitHub for Windows uses "posh-git") pointed to your
 repository folder with the name of the current branch at the end of the prompt
 in square brackets.
 
-If the branch name listed at the end of the prompt is not the branch you've been
-working on, run this command to list the available branches:
+>   Please note that this section borrows significantly from the excellent blog
+>   post by Bradly Feeley which is linked at the bottom of this document.
+
+If the branch name listed in square brackets on the prompt is not the branch
+name that you've been working on, run this command to list the available
+branches:
 
 `git branch`
 
 As long as you see the branch that you were working on in the list, you can run
-this command to switch to it:
+then this command to switch to it:
 
 `git checkout MyBranchNameThatIWasWorkingOn`
 
-Now you should see the correct branch name at the end of the prompt.  What we
-want to do is add a remote branch to our local repository.
+Now you should see the correct branch name at the end of the prompt.
+
+### This is the part you only have to do once for your local repository
+
+What we want to do is check to confirm that there is a remote called "upstream"
+that points to the original GitHub repository.  Run this command (-v for
+verbose):
+
+`git remote -v`
+
+You should see two lines listed as "origin" with the URL to your forked repo and
+"fetch" and "pull".  If you see two "upstream" lines, then that's great - it
+means you don't have to run the next command.  If you don't see two lines
+labeled "upstream", then run this command substituting %owner% as the GitHub
+owner's username, and %project% as the GitHub project name:
+
+`git remote add upstream https://github.com/%owner%/%project%.git`
+
+If you run `git remote -v` again, you should see that the upstream fetch and
+push remote entries have been added.  Now you can pull down the changes made to
+the remote repository.
+
+### This is the part you have to do every time you want to merge in other users' changes
+
+Run this command to fetch the latest changes from the remote named upstream:
+
+`git fetch upstream`
+
+As long as the posh-git command-line shows the local branch that you want to
+update, you can run this command to pull the latest changes from the official
+project repo's master branch into your *current *branch:
+
+`git merge upstream/master`
+
+Once that has been done, switch back to GitHub for Windows.  You should see that
+your local repo is now one or more commits ahead of your fork on GitHub - this
+is correct because you only merged in those changes locally.  Now if you click
+the sync button, the merged in changes will update your forked repo on GitHub
+and the two will be up-to-date.  If you happen to get a sync failure, you'll
+have to troubleshoot in the shell which is out of scope for this document.
+
+If you followed the instructions in this section because your pull request
+couldn't be merged, you should now be able to update your pull request via the
+GitHub web site.  Click the gear icon in GitHub for Windows and choose "view on
+github".  You should see a button that allows you to update the pull request.
+
+
+
+Great References
+----------------
+
+-   http://bradlyfeeley.com/2008/09/03/update-a-github-fork-from-the-original-repo/
+
+-   https://help.github.com/articles/fork-a-repo
 
 
 
