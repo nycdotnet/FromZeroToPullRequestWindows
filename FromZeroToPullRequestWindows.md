@@ -264,11 +264,32 @@ contribute the code.
 Merging Other Changes
 ---------------------
 
-As long as no changes were made to the project repo since the time that you
-created your branch, the pull request should be able to be accepted by the
+As long as no changes were made to the main project's repo since the time that
+you created your branch, the pull request should be able to be accepted by the
 project maintainers without any further technical work on your part.  In busy
-projects, however, other changes were probably made in the meantime, and you may
-be asked to merge those other changes in first.
+projects, however, other changes were probably made in the meantime, so you may
+be asked to merge those other changes before your pull request will be accepted.
+This will require using the git command line tool.
+
+Click the gear icon in the top-right and choose "open a shell here".  You should
+see a PowerShell instance (GitHub for Windows uses "posh-git") pointed to your
+repository folder with the name of the current branch at the end of the prompt
+in square brackets.
+
+If the branch name listed at the end of the prompt is not the branch you've been
+working on, run this command to list the available branches:
+
+`git branch`
+
+As long as you see the branch that you were working on in the list, you can run
+this command to switch to it:
+
+`git checkout MyBranchNameThatIWasWorkingOn`
+
+Now you should see the correct branch name at the end of the prompt.  What we
+want to do is add a remote branch to our local repository.
+
+
 
 
 
