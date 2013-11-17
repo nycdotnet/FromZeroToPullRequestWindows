@@ -38,10 +38,16 @@ Registering and contributing to open source projects on GitHub is free.
     follow the directions to sign up for a free account via the web site.
 
 -   Note that your GitHub username is always public, but *your email address can
-    public or private* depending on how you set the options (see below).
+    public or private* depending on how you set the options (see next step).
 
+Once you've registered on the site, switch back to GitHub for Windows, enter
+your GitHub username and password, and log in.  On the Configuration tab, enter
+your full name and email address.
 
-
-
+//  If you are concerned about privacy, you can put your GitHub username instead
+//  of your full name and "*username*@users.noreply.github.com" instead of your
+//  email address; you will also want to
+//  https://help.github.com/articles/keeping-your-email-address-private and
+//  follow the instructions there.
 
 
