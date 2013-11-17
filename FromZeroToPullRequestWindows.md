@@ -11,8 +11,8 @@ other source control system.  This guide is different from other guides because:
 
 -   It only describes how to contribute to an *existing* project
 
--   It tells you what to do step-by-step and includes definitions of the basic
-    terms
+-   It is not embarrassed to give step-by-step directions or definitions of
+    basic terms
 
 -   It prioritizes the GitHub for Windows UI when the command-line is not
     required
@@ -22,7 +22,7 @@ other source control system.  This guide is different from other guides because:
 
 The reader is strongly encouraged to learn more about Git and GitHub from any of
 the many other wonderful guides out there after having successfully navigated
-this guide.  **This guide is intended to teach you the bare minimum to get
+this guide.  **This guide is intended to teach only the bare minimum to get
 started!**
 
 Note that this guide assumes that:
@@ -107,9 +107,7 @@ Creating a Branch
 -----------------
 
 *A branch in Git is the way that independent development efforts are kept
-separate from each other within a repo.  A commit is a unit of work that is
-saved into a repository on a particular branch; commits are somewhat similar to
-check-ins in other source control systems.*
+separate from each other within a repo.*
 
 You're now ready to begin working on the project.  But before you start patching
 code, adding tests, developing new features, or improving documentation, you
@@ -130,10 +128,18 @@ didn't even have to talk to GitHub to do this; Git is a decentralized source
 control system and operations mostly take place locally until they are
 synchronized with the server.
 
+Click "Publish" and the newly created branch will be sent to GitHub and be added
+to your fork of the project.  Remember - this does not affect the original
+project, just your fork of it.
+
 
 
 Committing Code
 ---------------
+
+*A commit is a unit of work that is saved into a repository on a particular
+branch; commits are somewhat similar to check-ins in other source control
+systems.*
 
 Click the "gear" icon in the top-right and select "Open in Explorer".  Create a
 new text file in that folder called "ThisIsMyNewFeature.txt".  Put **at least
@@ -151,15 +157,53 @@ text file" in the field on the upper-left.  Finally, click the "commit to
 MyNewFeature" button.
 
 You've now successfully committed code to your branch!  The commit should appear
-in the history list on the left above the historical commits made by other
-users.  Now, switch back to the same text file using your text editor and modify
-**one** of the lines (in whatever way, as long as it's different) and add
-**one** new line with new random text.  Switch back to GitHub for Windows, and
-you should now see that the removed lines are highlighted in a salmon color and
-the added lines are again highlighted in green (Git considers a modified line to
-be deleted and re-added in its new form).  Commit this file by adding a message
-again (such as "edited the feature content"), and clicking the commit button.
+in the history list on the left above the historical commits made by other users
+in the "unsynced commits" section (we'll get back to that later).  Now, open up
+the same text file in your text editor again, and modify **one** of the lines
+(in whatever way, as long as it's different) and add **one** new line with new
+random text.  Switch back to GitHub for Windows, and you should now see that the
+removed lines are highlighted in a salmon color and the added lines are again
+highlighted in green (Git considers a modified line to be deleted and re-added
+in its new form).  Commit the updated file by adding another commit message
+(such as "edited the feature content"), and then clicking the commit button.
 
 So far, you've made two commits to your local repository.  You may have noticed
 that the commits are listed as "unsynced commits" in GitHub for Windows.  This
-is because the changes still only reside on your local machine.
+is because the changes still only reside on your local machine.  We're ready to
+send these changes up to GitHub now.  Click the "sync" button in the upper-right
+hand corner.  This should take a few seconds and then your commits will be moved
+down to the commit history.  Click the "gear" again and choose "view on github".
+There should be a button that says "branch: master" (or another branch name) on
+it.  If you click that button, you will be able to select the MyNewFeature
+branch and see the commits you made as well as viewing the content of the
+"ThisIsMyNewFeature.txt" file on the GitHub web site.  Recall that these changes
+only exist in *your fork of the project repository* - they haven't affected the
+main project repository in any way.
+
+
+
+Switching and Deleting Branches
+-------------------------------
+
+Before we continue, let's switch branches on our project just to see what
+happens.  In GitHub for Windows, click on the branches button in the upper left
+and select "master".  Then open up Windows Explorer on the Repo folder.  You
+will notice that the "ThisMyNewFeatrure.txt" file has disappeared.  This is
+because that file does not exist on the master branch; it only exists within the
+"MyNewFeature" branch.  Switch back to GitHub for Windows and change the branch
+to "MyNewFeature" again.  You will notice that the text file has now reappeared
+in the folder.  All of this happened locally - this is possible because the
+commit history of each local Git branch is stored in the file system within a
+hidden ".git" folder.
+
+Switch back to the master branch yet again, and now click on the "manage /
+merge" button within the branch menu.  Since we merely created the MyNewFeature
+branch as a test and there is no actual useful work within it, we can delete it.
+Hover your mouse pointer over the MyNewFeature branch, and click the trash can
+button that appears on the right.  Note that this is one of the few features of
+GitHub that happens immediately both locally and on the server.
+
+
+
+Committing Code
+---------------
