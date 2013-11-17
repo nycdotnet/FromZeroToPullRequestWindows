@@ -203,18 +203,35 @@ Hover your mouse pointer over the MyNewFeature branch, and click the trash can
 button that appears on the right.  Note that this is one of the few features of
 GitHub that happens immediately both locally and on the server.
 
+Note that if you ever want to switch branches (if you're starting a new idea or
+need to fix a bug on the main branch), you will either have to commit all of
+your outstanding changes to the current branch first, or else you can look into
+using "Git stash" at the command prompt.
+
 
 
 Go Forth And Code
 -----------------
 
-This is the part where you go forward and do some interesting stuff.  But before
+This is the part where you go forward and do "interesting stuff".  But before
 you start patching code, adding tests, developing new features, or improving
 documentation, remember that you should always add a branch.  Call the branch
 something related to what you're doing such as "Issue-12-Fix", "CSS-Cleanup", or
-"New-Sales-Report".  Then code up that fix or feature and feel free to commit to
-your branch as needed along the way.  A good way is to save on words, commit on
-sentences,
+"New-Shiny-Feature".  Then code up that fix or feature and feel free to commit
+to your branch as needed along the way.  A good mental model is "save on words,
+commit on sentences, push on paragraphs".
+
+Also note that before you do too much work on a project, it's important to do
+some research on how or if the project maintainers accept contributions.  There
+may be a wiki page or readme that has that information.  Also, if there is a
+mailing list you may wish to join it and ask.  This will help you understand if
+an idea you have in your head sounds interesting to the current project
+maintainers and also what standards or rules the maintainers may have with
+regards to how changes should be developed and submitted.  Some projects
+commonly accept code out of the blue, while others follow a strict governance
+model.  It's good to know the culture of the project up-front before you've
+spent a great deal of time working on something; the bigger your change, the
+more you should tend to research and communicate before coding.
 
 
 
@@ -223,7 +240,15 @@ Creating a Pull Request
 
 *A Pull Request is when one GitHub user asks another GitHub user to accept code
 into their repo; "I hereby request that you pull this code".  A pull request
-will sit there until it is merged (accepted), modified, or closed (the repo
-owner decided that they didn't want the code).*
+exists until it is merged (accepted), modified, or closed ("no thanks") by the
+repo owner.*
+
+So you have created a branch, worked on some code, committed the code to your
+branch, and synchronized *your* local repo with *your* fork of the project on
+GitHub.  You've communicated with the Great!  If you're happy with the code and
+you think it's ready to submit for consideration to the main project repo, then
+you have a bit of work to do.
+
+First, you have to do a bit of research on the project.  Many projects
 
 
