@@ -44,10 +44,10 @@ Once you've registered on the site, switch back to GitHub for Windows, enter
 your GitHub username and password, and log in.  On the Configuration tab, enter
 your full name and email address.
 
-//  If you are concerned about privacy, you can put your GitHub username instead
-//  of your full name and "*username*@users.noreply.github.com" instead of your
-//  email address; you will also want to
-//  https://help.github.com/articles/keeping-your-email-address-private and
-//  follow the instructions there.
+>   If you are concerned about privacy, you can put your GitHub username instead
+>   of your full name and "*username*@users.noreply.github.com" instead of your
+>   email address; you will also want to
+>   https://help.github.com/articles/keeping-your-email-address-private and
+>   follow the instructions there.
 
 
