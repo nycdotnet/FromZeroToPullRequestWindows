@@ -80,10 +80,10 @@ with a readme file.  A fork on GitHub is your "personal" copy of another user's
 repository.*
 
 You're reading this guide because you want to contribute to a project on GitHub.
-Let's make that happen.  Go to GitHub.com and log in if you're not already.
-Find that special project's web page and click the "Fork" button in the
-upper-right hand corner.  This will create a personal copy of that project on
-GitHub that you can modify as you wish.  Your fork will be available at
+Let's make that happen.  Go to GitHub.com and log in if you're not already. Find
+that special project's web page and click the "Fork" button in the upper-right
+hand corner.  This will create a personal copy of that project on GitHub that
+you can modify as you wish.  Your fork will be available at
 https://github.com/YourUserName/TheRepoName .
 
 >   If you're worried that this seems weird or presumptuous - don't be; forking
@@ -109,12 +109,12 @@ Creating a Branch
 *A branch in Git is the way that independent development efforts are kept
 separate from each other within a repo.*
 
-You're now ready to begin working on the project.  But before you start patching
-code, adding tests, developing new features, or improving documentation, you
-should add a branch.  The idea with branches is that you can work on code
-without ever being obligated to merge your changes into the main code branch.
-Also, getting in to the habit of using branches means you can very easily put
-aside new work and switch back to an older branch if necessary.
+You're now ready to begin working on the project.  But before you start making
+changes or adding new stuff, you should always add a branch.  The idea with
+branches is that you can work on code without ever being obligated to merge your
+changes into the main code branch. Also, getting in to the habit of using
+branches means you can very easily put aside new work and switch back to an
+older branch if necessary.
 
 If you look in the upper-right hand corner of the GitHub for Windows app (to the
 right of the sync button), there should be a branch icon which will say either
@@ -205,5 +205,25 @@ GitHub that happens immediately both locally and on the server.
 
 
 
-Committing Code
----------------
+Go Forth And Code
+-----------------
+
+This is the part where you go forward and do some interesting stuff.  But before
+you start patching code, adding tests, developing new features, or improving
+documentation, remember that you should always add a branch.  Call the branch
+something related to what you're doing such as "Issue-12-Fix", "CSS-Cleanup", or
+"New-Sales-Report".  Then code up that fix or feature and feel free to commit to
+your branch as needed along the way.  A good way is to save on words, commit on
+sentences,
+
+
+
+Creating a Pull Request
+-----------------------
+
+*A Pull Request is when one GitHub user asks another GitHub user to accept code
+into their repo; "I hereby request that you pull this code".  A pull request
+will sit there until it is merged (accepted), modified, or closed (the repo
+owner decided that they didn't want the code).*
+
+
