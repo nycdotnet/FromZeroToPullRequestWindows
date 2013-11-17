@@ -3,19 +3,21 @@ How to submit code to a GitHub project on Windows
 
 *From Zero to “Pull Request”*
 
-This guide is intended for developers on the Windows platform who have not
-previously used Git or GitHub, but who do have basic knowledge of at least one
-other source control system.  This guide is different from other guides because:
+By Steve Ognibene - November 17, 2013
+
+This guide is intended for developers who have not previously used Git or
+GitHub, but who do have basic knowledge of at least one other source control
+system.  This guide is different from other guides because:
 
 -   It is specifically for developers who use Windows
 
 -   It only describes how to contribute to an *existing* project
 
--   It is not embarrassed to give step-by-step directions or definitions of
-    basic terms
-
 -   It prioritizes the GitHub for Windows UI when the command-line is not
     required
+
+-   It is not embarrassed to give step-by-step directions or definitions of
+    basic terms
 
 -   It prioritizes "the simple way for the common circumstance" over "every
     possible way for every possible circumstance"
@@ -43,13 +45,14 @@ site.  You can use Git without GitHub, but not GitHib without Git.*
 
 Go to <https://windows.github.com> and download the “GitHub for Windows” client.
 Install it.  This gives you a Windows UI suitable for most Git operations and a
-PowerShell-based command line Git environment.
+PowerShell-based command line Git environment for the rest.
 
 Once the installation is complete, you will have to log in to GitHub.
-Registering and contributing to open source projects on GitHub is free.
+Registering on GitHub.com is free, and you can also create new and contribute to
+existing public open source projects for free.
 
 -   Click the "Sign up" link in the GitHub for Windows application and then
-    follow the directions to sign up for a free account via the web site.
+    follow the directions to register for a free account via the web site.
 
 -   Note that your GitHub username is always public, but *your email address can
     be public or private* depending on how you set your options (see note
@@ -75,7 +78,7 @@ Forking a Repository
 
 *Necessary terminology: A repository in Git (often abbreviated as a "repo") is
 the largest single unit of code managed by Git; a repository could be a major
-project, a collection of smaller related-projects, or even just a single script
+project, a collection of smaller related projects, or even just a single script
 with a readme file.  A fork on GitHub is your "personal" copy of another user's
 repository.*
 
@@ -106,13 +109,13 @@ details on the right.
 Creating a Branch
 -----------------
 
-*A branch in Git is the way that independent development efforts are kept
+*In Git, a branch is the way that independent development efforts are kept
 separate from each other within a repo.*
 
-You're now ready to begin working on the project.  But before you start making
-changes or adding new stuff, you should always add a branch.  The idea with
-branches is that you can work on code without ever being obligated to merge your
-changes into the main code branch. Also, getting in to the habit of using
+You're now nearly ready to begin working on the project.  Before you start
+making changes or adding new stuff, you should always add a branch.  The idea
+with branches is that you can work on code without ever being obligated to merge
+your changes into the main code branch. Also, getting in to the habit of using
 branches means you can very easily put aside new work and switch back to an
 older branch if necessary.
 
@@ -188,7 +191,7 @@ Switching and Deleting Branches
 Before we continue, let's switch branches on our project just to see what
 happens.  In GitHub for Windows, click on the branches button in the upper left
 and select "master".  Then open up Windows Explorer on the Repo folder.  You
-will notice that the "ThisMyNewFeatrure.txt" file has disappeared.  This is
+will notice that the "ThisMyNewFeature.txt" file has disappeared.  This is
 because that file does not exist on the master branch; it only exists within the
 "MyNewFeature" branch.  Switch back to GitHub for Windows and change the branch
 to "MyNewFeature" again.  You will notice that the text file has now reappeared
@@ -210,7 +213,7 @@ using "Git stash" at the command prompt.
 
 
 
-Go Forth And Code
+Go Forth and Code
 -----------------
 
 This is the part where you go forward and do "interesting stuff".  But before
@@ -218,8 +221,8 @@ you start patching code, adding tests, developing new features, or improving
 documentation, remember that you should always add a branch.  Call the branch
 something related to what you're doing such as "Issue-12-Fix", "CSS-Cleanup", or
 "New-Shiny-Feature".  Then code up that fix or feature and feel free to commit
-to your branch as needed along the way.  A good mental model is "save on words,
-commit on sentences, push on paragraphs".
+to your branch periodically along the way.  A good mental model is "save on
+words, commit on sentences, push on paragraphs".
 
 Also note that before you do too much work on a project, it's important to do
 some research on how or if the project maintainers accept contributions.  There
@@ -239,9 +242,9 @@ Creating a Pull Request
 -----------------------
 
 *A Pull Request is when one GitHub user asks another GitHub user to accept code
-into their repo; "I hereby request that you pull this code".  A pull request
-exists until it is merged (accepted), modified, or closed ("no thanks") by the
-repo owner.*
+into their repo; "I hereby request that you pull this code into your repo".  A
+pull request exists until it is merged (accepted), modified, or closed ("no
+thanks") by the repo owner.*
 
 So you have created a branch, worked on some code, committed the code to your
 branch, and synchronized *your* local repo with *your* fork of the project on
@@ -250,14 +253,14 @@ researched the project enough to know that they accept unsolicited pull
 requests.  Great!
 
 To create a pull request, click the gear icon in GitHub for Windows and choose
-"view on github".  You should see a new banner towards the top with a button
-that says "compare & pull request".  When you click that, you will see the
-changes that were made to your branch as compared to the code in the main repo.
-Provide a good title for the pull request and provide a reasonable description
-about what changed and why this is useful; be sure to reference any relevant
-issue numbers or discussion topics and URLs.  If you're happy with the code
-deltas that are listed at the bottom of the page, click "Send Pull Request" to
-contribute the code.
+"view on github".  You should see a new banner towards the top of the web page
+with a button that says "compare & pull request".  When you click that, you will
+see the changes that were made to your branch as compared to the code in the
+main repo. Provide a good title for the pull request and provide a reasonable
+description about what changed and why this is useful; be sure to reference any
+relevant issue numbers or discussion topics and URLs.  If you're happy with the
+code deltas that are listed at the bottom of the page, click "Send Pull Request"
+to contribute the code.
 
 
 
@@ -276,9 +279,6 @@ see a PowerShell instance (GitHub for Windows uses "posh-git") pointed to your
 repository folder with the name of the current branch at the end of the prompt
 in square brackets.
 
->   Please note that this section borrows significantly from the excellent blog
->   post by Bradly Feeley which is linked at the bottom of this document.
-
 If the branch name listed in square brackets on the prompt is not the branch
 name that you've been working on, run this command to list the available
 branches:
@@ -295,16 +295,16 @@ Now you should see the correct branch name at the end of the prompt.
 ### This is the part you only have to do once for your local repository
 
 What we want to do is check to confirm that there is a remote called "upstream"
-that points to the original GitHub repository.  Run this command (-v for
+that points to the original GitHub repository.  Run this command (-v is for
 verbose):
 
 `git remote -v`
 
-You should see two lines listed as "origin" with the URL to your forked repo and
-"fetch" and "pull".  If you see two "upstream" lines, then that's great - it
-means you don't have to run the next command.  If you don't see two lines
-labeled "upstream", then run this command substituting %owner% as the GitHub
-owner's username, and %project% as the GitHub project name:
+You should see two lines listed as "origin" with the URL to your forked repo -
+one marked fetch" and one marked "pull".  If you see two "upstream" lines, then
+that's great - it means you don't have to run the next command.  If you don't
+see two lines labeled "upstream", then run this command substituting %owner% as
+the GitHub owner's username, and %project% as the GitHub project name:
 
 `git remote add upstream https://github.com/%owner%/%project%.git`
 
@@ -319,31 +319,45 @@ Run this command to fetch the latest changes from the remote named upstream:
 `git fetch upstream`
 
 As long as the posh-git command-line shows the local branch that you want to
-update, you can run this command to pull the latest changes from the official
-project repo's master branch into your *current *branch:
+update, you can run this next command to pull the latest changes from the
+official project repo's master branch into your *current *branch:
 
 `git merge upstream/master`
 
 Once that has been done, switch back to GitHub for Windows.  You should see that
 your local repo is now one or more commits ahead of your fork on GitHub - this
-is correct because you only merged in those changes locally.  Now if you click
-the sync button, the merged in changes will update your forked repo on GitHub
-and the two will be up-to-date.  If you happen to get a sync failure, you'll
-have to troubleshoot in the shell which is out of scope for this document.
+seems strange but it is correct because you only merged in those changes
+locally.  Now if you click the sync button, the merged-in changes in your local
+repo will be copied back up to your forked repo on GitHub and the two will then
+be in sync.  If you happen to get a sync failure, you'll have to troubleshoot in
+the shell which is out of scope for this guide.
 
 If you followed the instructions in this section because your pull request
-couldn't be merged, you should now be able to update your pull request via the
-GitHub web site.  Click the gear icon in GitHub for Windows and choose "view on
-github".  You should see a button that allows you to update the pull request.
+originally couldn't be merged, you should now be able to update your pull
+request via the GitHub web site.  Click the gear icon in GitHub for Windows and
+choose "view on github".  You should see a button that allows you to update the
+pull request.
 
 
 
-Great References
-----------------
+That should do it!  You've now successfully contributed to an open source
+project on GitHub.  Hopefully the project maintainers will accept it!  Check out
+the excellent Git resources listed below to learn more.
 
--   http://bradlyfeeley.com/2008/09/03/update-a-github-fork-from-the-original-repo/
 
--   https://help.github.com/articles/fork-a-repo
+
+Great Git References
+--------------------
+
+-   Learn Git by reading: http://git-scm.com/
+
+-   Learn Git interactively: http://try.github.io/
+
+-   How to fork a Repo (GitHub documentation):
+    https://help.github.com/articles/fork-a-repo
+
+-   Great blog post on updating a fork:
+    http://bradlyfeeley.com/2008/09/03/update-a-github-fork-from-the-original-repo/
 
 
 
