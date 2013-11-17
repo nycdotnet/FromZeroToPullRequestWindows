@@ -245,10 +245,31 @@ repo owner.*
 
 So you have created a branch, worked on some code, committed the code to your
 branch, and synchronized *your* local repo with *your* fork of the project on
-GitHub.  You've communicated with the Great!  If you're happy with the code and
-you think it's ready to submit for consideration to the main project repo, then
-you have a bit of work to do.
+GitHub.  You've communicated with the project owners about your change or you've
+researched the project enough to know that they accept unsolicited pull
+requests.  Great!
 
-First, you have to do a bit of research on the project.  Many projects
+To create a pull request, click the gear icon in GitHub for Windows and choose
+"view on github".  You should see a new banner towards the top with a button
+that says "compare & pull request".  When you click that, you will see the
+changes that were made to your branch as compared to the code in the main repo.
+Provide a good title for the pull request and provide a reasonable description
+about what changed and why this is useful; be sure to reference any relevant
+issue numbers or discussion topics and URLs.  If you're happy with the code
+deltas that are listed at the bottom of the page, click "Send Pull Request" to
+contribute the code.
+
+
+
+Merging Other Changes
+---------------------
+
+As long as no changes were made to the project repo since the time that you
+created your branch, the pull request should be able to be accepted by the
+project maintainers without any further technical work on your part.  In busy
+projects, however, other changes were probably made in the meantime, and you may
+be asked to merge those other changes in first.
+
+
 
 
