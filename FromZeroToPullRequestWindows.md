@@ -7,7 +7,7 @@ By Steve Ognibene - November 17, 2013
 
 This guide is intended for developers who have not previously used Git or
 GitHub, but who do have basic knowledge of at least one other source control
-system.  This guide is different from other guides because:
+system.  This guide is unique because:
 
 -   It is specifically for developers who use Windows
 
@@ -48,8 +48,8 @@ Install it.  This gives you a Windows UI suitable for most Git operations and a
 PowerShell-based command line Git environment for the rest.
 
 Once the installation is complete, you will have to log in to GitHub.
-Registering on GitHub.com is free, and you can also create new and contribute to
-existing public open source projects for free.
+Registering on GitHub.com is free, and you can both create new public open
+source projects and contribute to existing public projects for free.
 
 -   Click the "Sign up" link in the GitHub for Windows application and then
     follow the directions to register for a free account via the web site.
@@ -89,12 +89,13 @@ hand corner.  This will create a personal copy of that project on GitHub that
 you can modify as you wish.  Your fork will be available at
 https://github.com/YourUserName/TheRepoName .
 
->   If you're worried that this seems weird or presumptuous - don't be; forking
->   is a very normal thing on GitHub and it doesn't functionally affect the
->   original project in any way or obligate you to contribute.  You don't need
->   any special permissions to fork a public repo either - it's totally open!
+>   Don't worry if this seems weird or presumptuous - it's not; forking is a
+>   very normal thing on GitHub and it doesn't obligate you to contribute
+>   further or functionally affect the original project in any way (other than
+>   incrementing their fork count).  You don't need any special project
+>   permission to fork a public repo either - they are totally open!
 
-Open the GitHub for Windows app and click on your profile on the left under the
+Open GitHub for Windows and click your profile name on the left under the
 "GitHub" category.  The list of repositories in your account should show,
 including the repo that you just forked (if not, try refreshing).  Hover the
 mouse pointer over the forked repo and click "Clone".  All of the source code
@@ -109,46 +110,50 @@ details on the right.
 Creating a Branch
 -----------------
 
-*In Git, a branch is the way that independent development efforts are kept
-separate from each other within a repo.*
+*Necessary terminology: In Git, a branch is the way that independent development
+efforts are kept separate from each other within a repo.*
 
 You're now nearly ready to begin working on the project.  Before you start
 making changes or adding new stuff, you should always add a branch.  The idea
 with branches is that you can work on code without ever being obligated to merge
-your changes into the main code branch. Also, getting in to the habit of using
+your changes into the main code branch. Also, getting into the habit of using
 branches means you can very easily put aside new work and switch back to an
-older branch if necessary.
+older branch if necessary (such as having to patch a production issue after
+you've already started development on a new feature).
 
 If you look in the upper-right hand corner of the GitHub for Windows app (to the
 right of the sync button), there should be a branch icon which will say either
-"master" or the name of another branch in the repo.  Click on the branch button
-and type in the name "MyNewFeature" and hit Enter.  You should notice that the
-text "MyNewFeature" now appears next to the branch icon.  This means that you
-are now operating on the "MyNewFeature" branch which is independent from the
-previously selected branch.  Note that creating a branch was not difficult and
-there wasn't any expensive file copy operation involved.  Also note that you
-didn't even have to talk to GitHub to do this; Git is a decentralized source
-control system and operations mostly take place locally until they are
-synchronized with the server.
+"master" or the name of another branch in the repo.  Click the branch button,
+type the name "MyNewFeature" in the field, and hit Enter.  You should notice
+that the text "MyNewFeature" now appears by the branch icon.  This means that
+you are now operating on the "MyNewFeature" branch which can be changed
+independently from the previously selected branch.
 
-Click "Publish" and the newly created branch will be sent to GitHub and be added
+>   Note that creating a branch was not difficult and there wasn't an expensive
+>   file copy operation involved.  Also note that you didn't even have to talk
+>   to GitHub to do this; Git is a decentralized source control system, and most
+>   operations occur locally and are synchronized to the server later.
+
+Click "Publish", and the newly created branch will be sent to GitHub and added
 to your fork of the project.  Remember - this does not affect the original
-project, just your fork of it.
+project, just *your fork* of it.
 
 
 
 Committing Code
 ---------------
 
-*A commit is a unit of work that is saved into a repository on a particular
-branch; commits are somewhat similar to check-ins in other source control
-systems.*
+*Necessary terminology: In Git, a commit is a unit of code that is saved into a
+repository on a particular branch.  Git commits have many common traits with
+check-ins from other source control systems, but there are also some differences
+due to Git being a decentralized system.*
 
-Click the "gear" icon in the top-right and select "Open in Explorer".  Create a
-new text file in that folder called "ThisIsMyNewFeature.txt".  Put **at least
-three lines** of random text in the file, and save it.  Switch back to GitHub
-for Windows.  You should see in the upper-left that there are "uncommitted
-changes".  Click the button labeled "show".
+Let's practice creating some junk code and committing it.  Click the "gear" icon
+in the top-right and select "open in explorer".  Create a new text file in that
+folder called "ThisIsMyNewFeature.txt".  Put **at least three lines** of random
+text in the file, and save it.  Switch back to GitHub for Windows.  You should
+see in the upper-left that there are "uncommitted changes".  Click the button
+labeled "show".
 
 Listed on the right-hand panel, you should see the name of the text file that
 you created.  The content is displayed by clicking the "twisty" adjacent to the
