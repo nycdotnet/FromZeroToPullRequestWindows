@@ -27,13 +27,8 @@ the many other wonderful guides out there after having successfully navigated
 this guide.  **This guide is intended to teach only the bare minimum to get
 started!**
 
-Note that this guide assumes that:
-
--   You are using Windows 7 or higher
-
--   You have administrative rights on your machine
-
--   You have some sort of text editor available (Notepad is fine)
+*Assumption: you are an administrator on a Windows 7 or higher PC, and you have
+some sort of text editor available (Notepad is fine).*
 
 
 
