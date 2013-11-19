@@ -164,29 +164,31 @@ the file name is checked and type a commit message such as "Added new feature
 text file" in the field on the upper-left.  Finally, click the "commit to
 MyNewFeature" button.
 
-You've now successfully committed code to your branch!  The commit should appear
-in the history list on the left above the historical commits made by other users
-in the "unsynced commits" section (we'll get back to that later).  Now, open up
-the same text file in your text editor again, and modify **one** of the lines
-(in whatever way, as long as it's different) and add **one** new line with new
-random text.  Switch back to GitHub for Windows, and you should now see that the
-removed lines are highlighted in a salmon color and the added lines are again
-highlighted in green (Git considers a modified line to be deleted and re-added
-in its new form).  Commit the updated file by adding another commit message
-(such as "edited the feature content"), and then clicking the commit button.
+You've now successfully committed code to your local branch!  The commit should
+appear in the history list on the left above the historical commits made by
+other users in the "unsynced commits" section (we'll get back to that later).
+Now, open up the same text file in your text editor again, and modify **one** of
+the lines (in whatever way, as long as it's different) and add **one** new line
+with new random text.  Switch back to GitHub for Windows, and you should now see
+that the removed lines are highlighted in a salmon color and the added lines are
+again highlighted in green (Git considers a modified line to be deleted and
+re-added in its new form).  Commit the updated file by adding another commit
+message (such as "edited the feature content"), and then clicking the commit
+button.
 
 So far, you've made two commits to your local repository.  You may have noticed
 that the commits are listed as "unsynced commits" in GitHub for Windows.  This
 is because the changes still only reside on your local machine.  We're ready to
-send these changes up to GitHub now.  Click the "sync" button in the upper-right
-hand corner.  This should take a few seconds and then your commits will be moved
-down to the commit history.  Click the "gear" again and choose "view on github".
-There should be a button that says "branch: master" (or another branch name) on
-it.  If you click that button, you will be able to select the MyNewFeature
-branch and see the commits you made as well as viewing the content of the
-"ThisIsMyNewFeature.txt" file on the GitHub web site.  Recall that these changes
-only exist in *your fork of the project repository* - they haven't affected the
-main project repository in any way.
+send these changes up to your personal project fork on GitHub now.  Click the
+"sync" button in the upper-right hand corner.  This should take a few seconds
+and then your commits will be moved down to the commit history.  Click the
+"gear" again and choose "view on github". There should be a button on the web
+page that says "branch: master" (or another branch name) on it.  If you click
+that button, you will be able to select the MyNewFeature branch and see the
+commits you made as well as viewing the content of the "ThisIsMyNewFeature.txt"
+file on the GitHub web site.  Recall that these changes only exist in *your fork
+of the project repository* - they haven't affected the main project repository
+in any way.
 
 
 
@@ -194,90 +196,95 @@ Switching and Deleting Branches
 -------------------------------
 
 Before we continue, let's switch branches on our project just to see what
-happens.  In GitHub for Windows, click on the branches button in the upper left
-and select "master".  Then open up Windows Explorer on the Repo folder.  You
-will notice that the "ThisMyNewFeature.txt" file has disappeared.  This is
+happens.  Back in GitHub for Windows, click on the branches button in the upper
+right and select "master".  Then open up Windows Explorer on the Repo folder.
+You will notice that the "ThisMyNewFeature.txt" file has disappeared!  This is
 because that file does not exist on the master branch; it only exists within the
 "MyNewFeature" branch.  Switch back to GitHub for Windows and change the branch
 to "MyNewFeature" again.  You will notice that the text file has now reappeared
 in the folder.  All of this happened locally - this is possible because the
 commit history of each local Git branch is stored in the file system within a
-hidden ".git" folder.
+hidden ".git" folder (which you can see if you have "view hidden files" turned
+on).
 
-Switch back to the master branch yet again, and now click on the "manage /
+Switch back to the master branch yet again, and then click on the "manage /
 merge" button within the branch menu.  Since we merely created the MyNewFeature
-branch as a test and there is no actual useful work within it, we can delete it.
-Hover your mouse pointer over the MyNewFeature branch, and click the trash can
-button that appears on the right.  Note that this is one of the few features of
-GitHub that happens immediately both locally and on the server.
+branch as a test, and there is no actual useful work within it, we can safely
+delete it. Hover your mouse pointer over the MyNewFeature branch, and click the
+trash can button that appears on the right.  Note that this is one of the few
+features of GitHub that happens *immediately* on the server.
 
-Note that if you ever want to switch branches (if you're starting a new idea or
-need to fix a bug on the main branch), you will either have to commit all of
-your outstanding changes to the current branch first, or else you can look into
-using "Git stash" at the command prompt.
-
+If you ever need to switch branches, you will first have to commit all of your
+outstanding changes to the current branch, or else you can investigate `git
+stash` at the command prompt (out of scope for this guide).
 
 
-Go Forth and Code
------------------
 
-This is the part where you go forward and do "interesting stuff".  But before
+Go Forth and Code!
+------------------
+
+This is the part where you go do "interesting stuff" on your own.  But before
 you start patching code, adding tests, developing new features, or improving
 documentation, remember that you should always add a branch.  Call the branch
 something related to what you're doing such as "Issue-12-Fix", "CSS-Cleanup", or
-"New-Shiny-Feature".  Then code up that fix or feature and feel free to commit
-to your branch periodically along the way.  A good mental model is "save on
-words, commit on sentences, push on paragraphs".
+"New-Shiny-Feature".  Then, code up that fix or feature and regularly commit to
+your branch along the way.  A good mental model is, "save on words, commit on
+sentences, push on paragraphs".
 
-Also note that before you do too much work on a project, it's important to do
-some research on how or if the project maintainers accept contributions.  There
-may be a wiki page or readme that has that information.  Also, if there is a
-mailing list you may wish to join it and ask.  This will help you understand if
-an idea you have in your head sounds interesting to the current project
-maintainers and also what standards or rules the maintainers may have with
-regards to how changes should be developed and submitted.  Some projects
-commonly accept code out of the blue, while others follow a strict governance
-model.  It's good to know the culture of the project up-front before you've
-spent a great deal of time working on something; the bigger your change, the
-more you should tend to research and communicate before coding.
+Before you do too much work on a project, it's also important to do some
+research on how or if the project maintainers accept contributions.  There may
+be a wiki page or readme that has that information.  Also, if there is a mailing
+list you may wish to join it and ask.  This will help you understand if the idea
+in your head sounds interesting or useful to the current project maintainers,
+and also what standards or rules the maintainers may have with regards to how
+changes are developed and submitted.  Some projects commonly accept unsolicited
+code, while others follow a strict governance model.  It's good to know the
+culture of the project up-front before you've spent a great deal of time working
+on something; the bigger your change, the more you should tend to research and
+communicate before coding.
 
 
 
 Creating a Pull Request
 -----------------------
 
-*A Pull Request is when one GitHub user asks another GitHub user to accept code
-into their repo; "I hereby request that you pull this code into your repo".  A
-pull request exists until it is merged (accepted), modified, or closed ("no
-thanks") by the repo owner.*
+*Necessary terminology: A Pull Request is when one GitHub user asks another
+GitHub user to accept code into their repo; "I hereby request that you pull this
+code into your repo".  Pull requests may be discussed or modified until merged
+(accepted), or closed ("no thanks") by the repo owner.*
 
 So you have created a branch, worked on some code, committed the code to your
-branch, and synchronized *your* local repo with *your* fork of the project on
-GitHub.  You've communicated with the project owners about your change or you've
-researched the project enough to know that they accept unsolicited pull
-requests.  Great!
+branch, and synchronized your local repo with your fork of the project on
+GitHub.  You've also communicated with the project owners about your change, or
+else you've researched the project enough to know that they accept unsolicited
+pull requests.  Great!
 
 To create a pull request, click the gear icon in GitHub for Windows and choose
 "view on github".  You should see a new banner towards the top of the web page
-with a button that says "compare & pull request".  When you click that, you will
-see the changes that were made to your branch as compared to the code in the
-main repo. Provide a good title for the pull request and provide a reasonable
-description about what changed and why this is useful; be sure to reference any
-relevant issue numbers or discussion topics and URLs.  If you're happy with the
-code deltas that are listed at the bottom of the page, click "Send Pull Request"
-to contribute the code.
+with a button that says "compare & pull request".  When you click that button,
+you will see the changes that were made to your branch versus the code in the
+main repo. Provide a good title for the pull request and provide a reasonably
+detailed description about what changed and why it is useful; be sure to
+reference any relevant issue numbers or discussion topics and URLs.  If you're
+happy with the code deltas that are listed at the bottom of the page, click
+"Send Pull Request" to contribute the code.
 
 
 
 Merging Other Changes
 ---------------------
 
-As long as no changes were made to the main project's repo since the time that
-you created your branch, the pull request should be able to be accepted by the
-project maintainers without any further technical work on your part.  In busy
-projects, however, other changes were probably made in the meantime, so you may
-be asked to merge those other changes before your pull request will be accepted.
-This will require using the git command line tool.
+*Necessary terminology: In Git, a "Remote Repository", shortened to "Remote" is
+a reference from your repo to another repository - for example from your local
+repo to your fork on GitHub. A "Remote Tracking Branch", shortened to "Remote
+Branch" is simply a branch that lives within a referenced remote.*
+
+As long as no other changes were made to the main project's repo since the time
+that you created your branch, the pull request should be able to be accepted by
+the project maintainers without any further technical work on your part.  In
+busy projects, however, other changes were probably made in the meantime and you
+may be asked to merge those changes before your pull request will be accepted.
+This will require using the Git command line tool.
 
 Click the gear icon in the top-right and choose "open a shell here".  You should
 see a PowerShell instance (GitHub for Windows uses "posh-git") pointed to your
@@ -295,9 +302,9 @@ then this command to switch to it:
 
 `git checkout MyBranchNameThatIWasWorkingOn`
 
-Now you should see the correct branch name at the end of the prompt.
 
-### This is the part you only have to do once for your local repository
+
+### Do this part once for your local repository
 
 What we want to do is check to confirm that there is a remote called "upstream"
 that points to the original GitHub repository.  Run this command (-v is for
@@ -305,49 +312,58 @@ verbose):
 
 `git remote -v`
 
-You should see two lines listed as "origin" with the URL to your forked repo -
-one marked fetch" and one marked "pull".  If you see two "upstream" lines, then
-that's great - it means you don't have to run the next command.  If you don't
-see two lines labeled "upstream", then run this command substituting %owner% as
-the GitHub owner's username, and %project% as the GitHub project name:
+You should see at least two lines listed as "origin" with the URL to your forked
+repo - one marked "fetch" and one marked "pull".  If you also see two "upstream"
+lines, then you don't have to run the next command.  If you don't see them,
+however, run this command, substituting %owner% for the GitHub owner's username,
+and %project% for the GitHub project name:
 
 `git remote add upstream https://github.com/%owner%/%project%.git`
 
-If you run `git remote -v` again, you should see that the upstream fetch and
-push remote entries have been added.  Now you can pull down the changes made to
-the remote repository.
+If you run `git remote -v` again, you should now see that you've added a remote
+called "upstream" that references the URL on GitHub for both fetch and push
+operations.  Now you can pull down the changes made in the remote repository.
 
-### This is the part you have to do every time you want to merge in other users' changes
 
-Run this command to fetch the latest changes from the remote named upstream:
+
+### Do this part every time you want to merge in other users' changes
+
+Run this command to fetch the latest changes from all branches of the "upstream"
+remote:
 
 `git fetch upstream`
 
-As long as the posh-git command-line shows the local branch that you want to
-update, you can run this next command to pull the latest changes from the
-official project repo's master branch into your *current *branch:
+You can then run this next command to actually merge those changes from the
+"master" branch of the "upstream" remote (which is the official project repo's
+master branch) into the *currently selected branch* (name in square brackets) of
+your local repo:
 
 `git merge upstream/master`
 
-Once that has been done, switch back to GitHub for Windows.  You should see that
-your local repo is now one or more commits ahead of your fork on GitHub - this
-seems strange but it is correct because you only merged in those changes
-locally.  Now if you click the sync button, the merged-in changes in your local
-repo will be copied back up to your forked repo on GitHub and the two will then
-be in sync.  If you happen to get a sync failure, you'll have to troubleshoot in
-the shell which is out of scope for this guide.
+Once you've merged the changes, switch back to GitHub for Windows.  You should
+see that your local repo is now one or more commits ahead of your fork on
+GitHub.  This may seem strange, but it is correct because you fetched and then
+merged the changes from the "upstream" remote (pointing to the official GitHub
+project repo) to your local repository - your fork of the project on GitHub
+hasn't been touched yet.
+
+If you click the sync button now, the merged changes in your local repo will be
+copied up to your forked repo on GitHub and they will then be in sync.  If you
+happen to get a synchronization error, you'll have to troubleshoot in the shell
+which is out of scope for this guide.
 
 If you followed the instructions in this section because your pull request
 originally couldn't be merged, you should now be able to update your pull
 request via the GitHub web site.  Click the gear icon in GitHub for Windows and
 choose "view on github".  You should see a button that allows you to update the
-pull request.
+existing pull request and it should be much more easily merged by the project
+maintainers.
 
 
 
 That should do it!  You've now successfully contributed to an open source
-project on GitHub.  Hopefully the project maintainers will accept it!  Check out
-the excellent Git resources listed below to learn more.
+project on GitHub.  Hopefully the project maintainers will accept your work.
+Check out the excellent Git resources listed below to learn more.
 
 
 
