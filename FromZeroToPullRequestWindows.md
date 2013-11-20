@@ -256,7 +256,7 @@ pull requests.  Great!
 
 To create a pull request, click the gear icon in GitHub for Windows and choose
 "view on github".  You should see a new banner towards the top of the web page
-with a button that says "compare & pull request".  When you click that button,
+with a button that says "Compare & pull request".  When you click that button,
 you will see the changes that were made to your branch versus the code in the
 main repo. Provide a good title for the pull request and provide a reasonably
 detailed description about what changed and why it is useful; be sure to
@@ -281,10 +281,10 @@ busy projects, however, other changes were probably made in the meantime and you
 may be asked to merge those changes before your pull request will be accepted.
 This will require using the Git command line tool.
 
-Click the gear icon in the top-right and choose "open a shell here".  You should
-see a PowerShell instance (GitHub for Windows uses "posh-git") pointed to your
-repository folder with the name of the current branch at the end of the prompt
-in square brackets.
+Click the gear icon in the top-right of GitHub for Windows and choose "open a
+shell here".  You should see a PowerShell instance (GitHub for Windows uses
+"posh-git") pointed to your repository folder with the name of the current
+branch at the end of the prompt in square brackets.
 
 If the branch name listed in square brackets on the prompt is not the branch
 name that you've been working on, run this command to list the available
@@ -339,7 +339,7 @@ Once you've merged the changes, switch back to GitHub for Windows.  You should
 see that your local repo is now one or more commits ahead of your fork on
 GitHub.  This may seem strange, but it is correct because you fetched and then
 merged the changes from the "upstream" remote (pointing to the official GitHub
-project repo) to your local repository - your fork of the project on GitHub
+project repo) to your *local* repository - your fork of the project on GitHub
 hasn't been touched yet.
 
 If you click the sync button now, the merged changes in your local repo will be
@@ -347,12 +347,16 @@ copied up to your forked repo on GitHub and they will then be in sync.  If you
 happen to get a synchronization error, you'll have to troubleshoot in the shell
 which is out of scope for this guide.
 
-If you followed the instructions in this section because your pull request
-originally couldn't be merged, you should now be able to update your pull
-request via the GitHub web site.  Click the gear icon in GitHub for Windows and
-choose "view on github".  You should see a button that allows you to update the
-existing pull request and it should be much more easily merged by the project
-maintainers.
+Pull requests work from branch to branch, so your existing pull request on the
+GitHub web site should have updated as soon as you synchronized.  Click the gear
+icon in GitHub for Windows and choose "view on github".  You should be able to
+find your existing pull request on the original project repo, and it should now
+be much more easily merged by the project maintainers.
+
+If you want to keep working on your new feature while you wait for the pull
+request to be accepted, you can just create a new branch off of the existing
+modified branch and keep going - you're not required to merge back into master
+first.
 
 
 
