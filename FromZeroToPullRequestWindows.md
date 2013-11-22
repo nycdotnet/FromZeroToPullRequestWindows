@@ -36,7 +36,7 @@ Installing Stuff and Registering on GitHub
 ------------------------------------------
 
 *Necessary terminology: Git is the source control system, GitHub is the web
-site.  You can use Git without GitHub, but not GitHib without Git.*
+site.  You can use Git without GitHub, but not GitHub without Git.*
 
 Go to <https://windows.github.com> and download the “GitHub for Windows” client.
 Install it.  This gives you a Windows UI suitable for most Git operations and a
