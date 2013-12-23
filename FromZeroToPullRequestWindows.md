@@ -36,7 +36,7 @@ Installing Stuff and Registering on GitHub
 ------------------------------------------
 
 *Necessary terminology: Git is the source control system, GitHub is the web
-site.  You can use Git without GitHub, but not GitHub without Git.*
+site.  You can use Git without GitHub, but not GitHib without Git.*
 
 Go to <https://windows.github.com> and download the “GitHub for Windows” client.
 Install it.  This gives you a Windows UI suitable for most Git operations and a
@@ -321,26 +321,23 @@ operations.  Now you can pull down the changes made in the remote repository.
 
 
 
-### Do this part every time you want to merge in other users' changes
+### Do this part every time you want to pull in other users' changes
 
-Run this command to fetch the latest changes from all branches of the "upstream"
-remote:
+The Git `pull` command will fetch commits from a local branch or remote tracking
+branch and immediately merge them into the current branch.  If you have the
+branch you were working on selected and have established the remote tracking
+branch called "upstream", then this command will fetch the latest changes on the
+project's master branch from GitHub and immediately merge them in to your
+*currently selected branch* (name in square brackets) of your local repo:
 
-`git fetch upstream`
-
-You can then run this next command to actually merge those changes from the
-"master" branch of the "upstream" remote (which is the official project repo's
-master branch) into the *currently selected branch* (name in square brackets) of
-your local repo:
-
-`git merge upstream/master`
+`git pull upstream master`
 
 Once you've merged the changes, switch back to GitHub for Windows.  You should
 see that your local repo is now one or more commits ahead of your fork on
-GitHub.  This may seem strange, but it is correct because you fetched and then
-merged the changes from the "upstream" remote (pointing to the official GitHub
-project repo) to your *local* repository - your fork of the project on GitHub
-hasn't been touched yet.
+GitHub.  This may seem strange, but it is correct because you pulled the changes
+from the "upstream" remote (pointing to the official GitHub project repo) to
+your *local* repository - the fork of the project on GitHub hasn't been updated
+yet.
 
 If you click the sync button now, the merged changes in your local repo will be
 copied up to your forked repo on GitHub and they will then be in sync.  If you
@@ -358,11 +355,26 @@ request to be accepted, you can just create a new branch off of the existing
 modified branch and keep going - you're not required to merge back into master
 first.
 
+### If you want finer control
+
+If you want finer control of the process of pulling in changes (such as seeing
+what has changed before merging the changes in), you should look into the `git
+fetch` and `git merge` commands which can be executed separately.  These two
+commands executed in sequence would be the essential equivalent of the above
+`pull` command:
+
+`git fetch upstream`
+
+`git merge upstream/master`
 
 
-That should do it!  You've now successfully contributed to an open source
-project on GitHub.  Hopefully the project maintainers will accept your work.
-Check out the excellent Git resources listed below to learn more.
+
+That should do it!
+------------------
+
+You've now successfully contributed to an open source project on GitHub.
+Hopefully the project maintainers will accept your work. Check out the excellent
+Git resources listed below to learn more.
 
 
 
@@ -381,6 +393,13 @@ Great Git References
 
 
 
+Thanks
+------
 
+Mike Caruso
+
+Bradly Feeley @bradly
+
+Nik Molnar @nikmd23
 
 
