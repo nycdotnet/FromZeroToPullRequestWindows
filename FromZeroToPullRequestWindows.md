@@ -385,6 +385,9 @@ Great Git References
 
 -   Learn Git interactively: http://try.github.io/
 
+-   For "Advanced beginners" with Git (may be you now!):
+    http://think-like-a-git.net/
+
 -   How to fork a Repo (GitHub documentation):
     https://help.github.com/articles/fork-a-repo
 
@@ -398,8 +401,10 @@ Thanks
 
 Mike Caruso
 
+Nik Molnar @nikmd23
+
 Bradly Feeley @bradly
 
-Nik Molnar @nikmd23
+
 
 
