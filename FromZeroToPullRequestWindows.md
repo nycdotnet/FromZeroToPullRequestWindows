@@ -2,7 +2,7 @@
 
 ## *From Zero to “Pull Request”*
 
-By Steve Ognibene - November 17, 2013
+By Steve Ognibene [@nycdotnet] - November 17, 2013
 
 This guide is intended for developers who have not previously used Git
 or GitHub, but who do have basic knowledge of at least one other source
