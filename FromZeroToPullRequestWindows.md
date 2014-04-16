@@ -2,7 +2,7 @@
 
 ## *From Zero to “Pull Request”*
 
-By Steve Ognibene https://twitter.com/nycdotnet - November 17, 2013
+By Steve Ognibene [@NYCdotNet](https://twitter.com/nycdotnet "Twitter") - November 17, 2013
 
 This guide is intended for developers who have not previously used Git
 or GitHub, but who do have basic knowledge of at least one other source
@@ -386,13 +386,13 @@ excellent Git resources listed below to learn more.
 
 Mike Caruso
 
-Nik Molnar https://twitter.com/nikmd23
+Nik Molnar [@nikmd23](https://twitter.com/nikmd23 "Twitter")
 
-Steve Ward https://twitter.com/stevelward
+Steve Ward [@stevelward](https://twitter.com/stevelward "Twitter")
 
-Bradly Feeley https://twitter.com/bradly
+Bradly Feeley [@bradly](https://twitter.com/bradly "Twitter")
 
-Alex Hasha https://twitter.com/alexhasha
+Alex Hasha [@alexhasha](https://twitter.com/alexhasha "Twitter")
 
 This document was edited using Texts http://www.texts.io
 
