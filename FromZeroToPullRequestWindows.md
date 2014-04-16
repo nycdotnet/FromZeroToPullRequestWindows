@@ -2,7 +2,7 @@
 
 ## *From Zero to “Pull Request”*
 
-By Steve Ognibene [@nycdotnet] - November 17, 2013
+By Steve Ognibene https://twitter.com/nycdotnet - November 17, 2013
 
 This guide is intended for developers who have not previously used Git
 or GitHub, but who do have basic knowledge of at least one other source
@@ -57,7 +57,7 @@ Windows application, enter your GitHub username and password, and log
 in. On the Configuration tab, enter your full name and email address.
 
 > If you are concerned about privacy, you can put your GitHub username
-> instead of your full name and "*username*[@users.noreply.github.com]"
+> instead of your full name and "*username*@users.noreply.github.com"
 > instead of your email address; you will also want to visit
 > <https://help.github.com/articles/keeping-your-email-address-private>
 > and follow the instructions there.
@@ -386,13 +386,13 @@ excellent Git resources listed below to learn more.
 
 Mike Caruso
 
-Nik Molnar [@nikmd23]
+Nik Molnar https://twitter.com/nikmd23
 
-Steve Ward [@stevelward]
+Steve Ward https://twitter.com/stevelward
 
-Bradly Feeley [@bradly]
+Bradly Feeley https://twitter.com/bradly
 
-Alex Hasha [@alexhasha]
+Alex Hasha https://twitter.com/alexhasha
 
 This document was edited using Texts http://www.texts.io
 
