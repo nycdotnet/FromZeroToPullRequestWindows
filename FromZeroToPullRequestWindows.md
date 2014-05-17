@@ -381,6 +381,9 @@ excellent Git resources listed below to learn more.
 
 -   Great blog post on updating a fork:
     http://bradlyfeeley.com/2008/09/03/update-a-github-fork-from-the-original-repo/
+    
+-   Send a pull request to another GitHub fork:
+    http://faisonz.com/blog/send-pull-request-to-another-github-fork/
 
 ## Thanks
 
