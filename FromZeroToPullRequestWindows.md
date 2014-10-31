@@ -384,6 +384,9 @@ excellent Git resources listed below to learn more.
     
 -   Send a pull request to another GitHub fork:
     http://faisonz.com/blog/send-pull-request-to-another-github-fork/
+	
+-   Difference between git pull --rebase and git pull --ff-only
+    http://stackoverflow.com/questions/25430600/difference-between-git-pull-rebase-and-git-pull-ff-only
 
 ## Thanks
 
