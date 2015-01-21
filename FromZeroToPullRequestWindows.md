@@ -388,6 +388,9 @@ excellent Git resources listed below to learn more.
 -   Difference between git pull --rebase and git pull --ff-only
     http://stackoverflow.com/questions/25430600/difference-between-git-pull-rebase-and-git-pull-ff-only
 
+-   Merge pull request on the main project into your fork
+    http://stackoverflow.com/questions/6022302/pull-requests-from-other-forks-into-my-fork
+
 ## Thanks
 
 Mike Caruso
