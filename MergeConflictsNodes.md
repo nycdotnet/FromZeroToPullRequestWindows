@@ -28,19 +28,15 @@ Note that it is possible to have all or none of A, B, and C clicked - they're al
 
 Once everything is completely resolved, save the file (CTRL+S) and quit KDiff3 (ALT+F4).  Git will then load the next conflicted file for you.  Repeat until there are no more conflicts.  Once you're done, run `git status`.  You will hopefully see the message (toward the top) "All conflicts fixed but you are still merging.".
 
-Now that you're done merging, use the GitHub for Windows UI to remove the merge helper files.  These will be files created with a BACKUP.?????, BASE.?????, LOCAL.????? or REMOTE.????? name.  You can safely remove these files now as they were just helpers for the merge work (and the originals of each are already in source control).
+Now that you're done merging, use the GitHub for Windows UI to remove the merge helper files.  These will be files created with a BACKUP.?????, BASE.?????, LOCAL.????? or REMOTE.????? name.  You can safely remove these files now as they were just helpers for the merge work (and the originals of each are already in source control).  You can also remove any *.orig files created by kdiff3.
 
-The easiest way to remove them is to You can find the files like so:
+The easiest way to them is to search like so:
 
-dir /s *.BACKUP.?????.*
-dir /s *.BASE.?????.*
-dir /s *.LOCAL.?????.*
-dir /s *.REMOTE.?????.*
+```
+dir /s /b *.BACKUP.?????.* & dir /s /b *.BASE.?????.* & dir /s /b *.LOCAL.?????.* & dir /s /b *.REMOTE.?????.* & dir /s /b *.orig
+```
 
-If so, you can type `git commit -m "Merged"` (feel free to improve this check-in comment to includ the branch name, etc.) and the merge should be completed.  You could also technically do this in the UI.
-
-
-
+If so, you can type `git commit -m "Merged changes from branch"` (feel free to improve this check-in comment to includ the branch name, etc.) and the merge should be completed.  You could also technically do this in the UI.
 
 
 References:
